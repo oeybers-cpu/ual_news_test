@@ -117,12 +117,58 @@
             top: 15px;
         }
 
-        .sidebar-image {
+        /* --- Animated UAL Logo --- */
+        .sidebar-logo-container {
             width: 100%;
+            aspect-ratio: 1; /* Makes it square */
             border-radius: 6px;
             margin-bottom: 15px;
             border: 1px solid rgba(0, 51, 102, 0.2);
+            background-color: #000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
         }
+
+        .ual-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 3rem; /* Adjust size as needed */
+            color: #c0c0c0; /* Silver color */
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 15px #fff,
+                0 0 20px #0ff, /* Cyan glow */
+                0 0 35px #0ff,
+                0 0 40px #0ff;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 15px #fff,
+                    0 0 20px #0ff,
+                    0 0 35px #0ff,
+                    0 0 40px #0ff;
+            }
+            to {
+                text-shadow:
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px #fff,
+                    0 0 40px #f0f, /* Magenta glow */
+                    0 0 70px #f0f,
+                    0 0 80px #f0f;
+            }
+        }
+        /* --- End of Animated UAL Logo --- */
+
 
         .sidebar-links {
             display: flex;
@@ -203,14 +249,6 @@
             line-height: 1.5;
         }
 
-        .header-image {
-            width: 150px;
-            margin: 12px auto;
-            border-radius: 6px;
-            border: 1px solid rgba(0, 51, 102, 0.3);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         .contact-card {
             background: var(--card-bg);
             border: 1px solid rgba(0, 51, 102, 0.1);
@@ -232,13 +270,7 @@
             align-items: flex-start;
             gap: 15px;
         }
-        .contact-card-image {
-            width: 80px;
-            height: auto;
-            border-radius: 5px;
-            border: 1px solid rgba(0, 51, 102, 0.2);
-            flex-shrink: 0;
-        }
+
         .contact-card-quote {
             flex-grow: 1;
             color: #333;
@@ -590,10 +622,6 @@
                 align-items: center;
                 text-align: center;
             }
-            .contact-card-image {
-                width: 60px;
-                margin-bottom: 10px;
-            }
         }
 
         @media (max-width: 600px) {
@@ -627,14 +655,14 @@
             .sidebar {
                 padding: 10px;
             }
-            .contact-card-image {
-                width: 50px;
-            }
             .contact-card-quote {
                 font-size: 0.95rem; /* Adjusted font size */
             }
             .google-form-iframe {
                 height: 700px; /* Adjust height for smaller screens if needed */
+            }
+            .ual-logo {
+                font-size: 2.5rem; /* Adjust size for smaller screens */
             }
         }
 
@@ -653,6 +681,9 @@
             .citation {
                 font-size: 0.8rem; /* Adjusted font size */
             }
+            .ual-logo {
+                font-size: 2rem; /* Adjust size for very small screens */
+            }
         }
         /* --- End of Media Queries --- */
 
@@ -662,19 +693,22 @@
     <div class="grid-lines"></div>
 
     <!-- --- Added Header Home Link --- -->
-    <a href="https://oeybers-cpu.github.io/a_lit_models/" class="header-home-link">Home</a>
+    <a href="https://www.up.ac.za/unit-for-academic-literacy" class="header-home-link">Home</a>
     <!-- --- End of Header Home Link --- -->
 
-    <!-- Sidebar with links and images -->
+    <!-- Sidebar with animated logo and links -->
     <div class="sidebar">
-        <img src="https://github.com/oeybers-cpu/ngugi/blob/main/Wa%20Thiongo.jpeg?raw=true" alt="UAL Logo" class="sidebar-image">
+        <!-- Animated UAL Logo -->
+        <div class="sidebar-logo-container">
+            <div class="ual-logo">UAL</div>
+        </div>
 
         <div class="sidebar-links">
             <a href="#guidelines" class="sidebar-link">
-                Guidelines
+                Focus Areas
             </a>
             <a href="#upload" class="sidebar-link">
-                Upload Article
+                Submission
             </a>
             <a href="#contact" class="sidebar-link">
                 Contact Us
@@ -687,60 +721,71 @@
         <div class="container">
             <header>
                 <h1>UAL Newsletter Article Submission</h1>
-                <p class="subtitle">Guidelines, Process, and Contact Information</p>
-
-                <!-- Optional Header Image -->
-                <!-- <img src="your-header-image-url.jpg" alt="UAL Newsletter" class="header-image"> -->
+                <p class="subtitle">Focus Areas, Process, and Contact Information</p>
 
                 <div class="contact-card">
                     <h2><i class="fas fa-info-circle"></i> Welcome Authors</h2>
                     <div class="contact-card-content">
                         <p class="contact-card-quote">
-                            Thank you for your interest in contributing to the UAL Newsletter. Please review the submission guidelines, use the provided form for uploading your article, and feel free to contact our editorial team with any questions.
+                            Thank you for your interest in contributing to the UAL Newsletter. Please review our focus areas, use the submission form below, and feel free to contact our editorial team with any questions.
                         </p>
                     </div>
                 </div>
             </header>
 
             <div class="articles-container">
-                <!-- Card 1: Guidelines -->
+                <!-- Card 1: Focus Areas (formerly Guidelines) -->
                 <div class="article-card" id="guidelines">
-                    <h3><i class="fas fa-book"></i> Submission Guidelines</h3>
+                    <h3><i class="fas fa-lightbulb"></i> Focus Areas</h3>
                     <div class="article-content">
-                        <p><strong>Article Length:</strong> Articles should be between 800 and 1,100 words.</p>
+                        <p>We welcome articles that explore the dynamic landscape of academic literacies, particularly within the African context. Our focus areas include:</p>
 
-                        <p><strong>Content:</strong></p>
+                        <p><strong>Multilingualism:</strong></p>
                         <ul>
-                            <li>Articles should be original and unpublished.</li>
-                            <li>Focus on topics relevant to African languages, literacies, education, and cultural studies.</li>
-                            <li>Ensure clarity, coherence, and a well-structured argument or narrative.</li>
-                            <li>Use accessible language suitable for a broad academic audience.</li>
+                            <li>Strategies for effective multilingual learning and teaching.</li>
+                            <li>Impact of multilingualism on academic success and identity.</li>
+                            <li>Developing and implementing multilingual academic resources.</li>
+                            <li>Challenges and opportunities in multilingual educational settings.</li>
                         </ul>
 
-                        <p><strong>Style and Formatting:</strong></p>
+                        <p><strong>Multimodality:</strong></p>
                         <ul>
-                            <li>Use a clear, readable font (e.g., Times New Roman, size 12).</li>
-                            <li>Double-space the text.</li>
-                            <li>Include page numbers.</li>
-                            <li>Provide a concise title (max. 15 words) and a brief abstract (50-100 words).</li>
-                            <li>Include 3-5 keywords.</li>
+                            <li>Integration of visual, audio, and digital modes in academic communication.</li>
+                            <li>Role of multimodal texts in disciplinary learning.</li>
+                            <li>Innovative multimodal pedagogies and assessment practices.</li>
+                            <li>Designing accessible and inclusive multimodal learning environments.</li>
                         </ul>
 
-                        <p><strong>Citations:</strong></p>
+                        <p><strong>Assessment:</strong></p>
                         <ul>
-                            <li>Follow the <strong>Harvard citation style</strong> for in-text references and the reference list.</li>
-                            <li>Ensure all sources are accurately cited to avoid plagiarism.</li>
-                            <li>Reference list should be alphabetized and placed at the end of the document.</li>
+                            <li>Developing fair and effective assessment methods for diverse learners.</li>
+                            <li>Formative and summative assessment strategies in academic literacies.</li>
+                            <li>Feedback practices that support student development.</li>
+                            <li>Aligning assessment with learning outcomes in multilingual contexts.</li>
                         </ul>
-                        <p class="citation">Example (Harvard): Ngũgĩ, W.T., 1986. <i>Decolonising the mind: the politics of language in African literature</i>. London: James Currey.</p>
 
-                        <p><strong>Author Bio:</strong> Include a short author biography (50-75 words) with your affiliation and contact details.</p>
+                        <p><strong>Disciplinary Interactions:</strong></p>
+                        <ul>
+                            <li>How academic literacies vary across different disciplines.</li>
+                            <li>Bridging general academic skills and discipline-specific practices.</li>
+                            <li>Collaborative approaches to teaching discipline-specific literacies.</li>
+                            <li>Preparing students for the literacy demands of specific fields.</li>
+                        </ul>
 
-                        <p><strong>Submission:</strong> Articles should be submitted as a Microsoft Word (.docx) or Rich Text Format (.rtf) file.</p>
+                        <p><strong>Technology:</strong></p>
+                        <ul>
+                            <li>Role of digital tools in supporting academic literacies development.</li>
+                            <li>Online and blended learning environments for academic literacies.</li>
+                            <li>Using technology for inclusive and accessible education.</li>
+                            <li>Ethical considerations and challenges of digital literacies.</li>
+                        </ul>
                     </div>
                     <div class="article-meta">
-                        <span class="meta-tag">Guidelines</span>
-                        <span class="meta-tag new-tag">Harvard Style</span>
+                        <span class="meta-tag">Multilingualism</span>
+                        <span class="meta-tag">Multimodality</span>
+                        <span class="meta-tag">Assessment</span>
+                        <span class="meta-tag">Disciplines</span>
+                        <span class="meta-tag">Technology</span>
                     </div>
                 </div>
 
@@ -748,7 +793,7 @@
                 <div class="article-card" id="contact">
                     <h3><i class="fas fa-envelope"></i> Contact the Editorial Team</h3>
                     <div class="article-content">
-                        <p>If you have any questions about the submission process, need clarification on the guidelines, or require assistance with your draft, please do not hesitate to contact our editorial support team.</p>
+                        <p>If you have any questions about the submission process, need clarification on our focus areas, or require assistance with your draft, please do not hesitate to contact our editorial support team.</p>
 
                         <div class="contact-info">
                             <p><strong>Nkosingiphile Zondi</strong><br>
@@ -796,9 +841,9 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Upload Process (Full Width) -->
+                <!-- Card 3: Submission Process (formerly Upload) (Full Width) -->
                 <div class="google-form-container" id="upload">
-                    <h3><i class="fas fa-upload"></i> Upload Your Article</h3>
+                    <h3><i class="fas fa-upload"></i> Submit Your Article</h3>
                     <div class="article-content">
                         <p>To submit your article, please complete the Google Form below. You will be asked to provide your article file and some basic information.</p>
                         <p><strong>Instructions:</strong></p>
@@ -828,7 +873,7 @@
                 </div>
                 <p>© 2024 UAL Newsletter Submission Portal</p>
                 <p>For inquiries, contact the editorial team.</p>
-                <p>Explore more: <a href="https://ualnewsletter.com" target="_blank">UAL Newsletter</a></p>
+                <p>Explore more: <a href="https://www.up.ac.za/unit-for-academic-literacy" target="_blank">Unit for Academic Literacy</a></p>
             </div>
         </div>
     </div>
