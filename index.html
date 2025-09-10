@@ -37,6 +37,7 @@
             font-family: 'Exo 2', sans-serif;
             line-height: 1.6;
             display: flex;
+            font-size: 18px; /* Increased base font size */
         }
 
         body::before {
@@ -74,7 +75,7 @@
             left: 15px;
             display: inline-block;
             text-align: center;
-            padding: 7px 14px;
+            padding: 10px 18px; /* Increased padding */
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border: 1px solid var(--text);
             border-radius: 20px;
@@ -82,7 +83,7 @@
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 1.1rem; /* Increased font size */
             transition: all 0.3s ease;
             box-shadow:
                 0 0 7px var(--primary),
@@ -132,12 +133,12 @@
         .sidebar-link {
             color: var(--primary);
             text-decoration: none;
-            padding: 10px 12px;
+            padding: 12px 15px; /* Increased padding */
             border-radius: 6px;
             background: rgba(0, 51, 102, 0.05);
             border: 1px solid rgba(0, 51, 102, 0.1);
             transition: all 0.3s ease;
-            font-size: 0.8rem;
+            font-size: 1.1rem; /* Increased font size */
             text-align: center;
         }
 
@@ -159,8 +160,8 @@
 
         header {
             text-align: center;
-            padding: 20px 0 10px;
-            margin-bottom: 15px;
+            padding: 25px 0 15px; /* Increased padding */
+            margin-bottom: 20px; /* Increased margin */
             position: relative;
             background: linear-gradient(to right, rgba(0, 51, 102, 0.1), transparent);
             border-bottom: 1px solid rgba(0, 51, 102, 0.2);
@@ -168,8 +169,8 @@
         }
 
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 6px;
+            font-size: 2.2rem; /* Increased font size */
+            margin-bottom: 10px; /* Increased margin */
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
@@ -195,10 +196,10 @@
         }
 
         .subtitle {
-            font-size: 0.7rem;
+            font-size: 1.1rem; /* Increased font size */
             color: #444;
             max-width: 800px;
-            margin: 8px auto 10px;
+            margin: 12px auto 15px; /* Increased margins */
             line-height: 1.5;
         }
 
@@ -214,9 +215,9 @@
             background: var(--card-bg);
             border: 1px solid rgba(0, 51, 102, 0.1);
             border-radius: 9px;
-            padding: 12px;
+            padding: 15px; /* Increased padding */
             max-width: 95%;
-            margin: 15px auto;
+            margin: 20px auto; /* Increased margin */
             backdrop-filter: blur(10px);
             box-shadow: 0 0 18px rgba(0, 51, 102, 0.1);
             transition: all 0.4s ease;
@@ -241,7 +242,7 @@
         .contact-card-quote {
             flex-grow: 1;
             color: #333;
-            font-size: 0.7rem;
+            font-size: 1.1rem; /* Increased font size */
             margin: 0;
             line-height: 1.5;
         }
@@ -270,8 +271,8 @@
 
         .contact-card h2 {
             color: var(--primary);
-            margin-bottom: 9px;
-            font-size: 1rem;
+            margin-bottom: 12px; /* Increased margin */
+            font-size: 1.4rem; /* Increased font size */
             display: flex;
             align-items: center;
             gap: 9px;
@@ -283,11 +284,11 @@
         .contact-card a {
             color: var(--primary);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 1.1rem; /* Increased font size */
             transition: all 0.3s ease;
             word-break: break-word;
             display: inline-block;
-            padding: 3px 6px;
+            padding: 5px 8px; /* Increased padding */
             border-radius: 3px;
         }
 
@@ -297,10 +298,10 @@
             background: rgba(0, 0, 0, 0.05);
         }
 
-        /* Square grid layout */
+        /* Grid layout for cards */
         .articles-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
             gap: 24px;
             margin: 24px 0;
         }
@@ -309,14 +310,13 @@
             background: var(--card-bg);
             border: 1px solid rgba(0, 51, 102, 0.1);
             border-radius: 9px;
-            padding: 15px;
+            padding: 20px; /* Increased padding */
             transition: all 0.4s ease;
             backdrop-filter: blur(5px);
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            /* aspect-ratio: 1/1; Removed for better content fit */
         }
 
         .article-card::before {
@@ -344,8 +344,8 @@
 
         .article-card h3 {
             color: var(--primary);
-            font-size: 1rem;
-            margin-bottom: 9px;
+            font-size: 1.4rem; /* Increased font size */
+            margin-bottom: 12px; /* Increased margin */
             line-height: 1.3;
             font-weight: 600;
             display: flex;
@@ -355,56 +355,55 @@
         }
 
         .article-card h3 i {
-            font-size: 1.1rem;
+            font-size: 1.3rem; /* Increased icon size */
         }
 
         .article-content {
             color: #222;
-            font-size: 0.8rem;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 1.1rem; /* Increased font size */
+            line-height: 1.6; /* Slightly increased line height */
+            margin-bottom: 15px; /* Increased margin */
             flex-grow: 1;
             text-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
-            overflow-y: auto;
         }
 
         .article-content p {
-            margin-bottom: 10px;
+            margin-bottom: 12px; /* Increased margin */
         }
 
-        .article-content ul {
-            padding-left: 16px;
-            margin-bottom: 10px;
+        .article-content ul, .article-content ol {
+            padding-left: 20px; /* Increased padding */
+            margin-bottom: 12px; /* Increased margin */
         }
 
         .article-content li {
-            margin-bottom: 6px;
+            margin-bottom: 8px; /* Increased margin */
         }
 
         .citation {
             background: rgba(0, 51, 102, 0.1);
             color: var(--primary);
-            padding: 3px 7px;
+            padding: 5px 10px; /* Increased padding */
             border-radius: 12px;
-            font-size: 0.55rem;
+            font-size: 0.9rem; /* Increased font size */
             border: 1px solid rgba(0, 51, 102, 0.2);
             display: inline-block;
-            margin: 4px 0;
+            margin: 6px 0; /* Increased margin */
         }
 
         .article-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin: 7px 0;
+            gap: 10px; /* Increased gap */
+            margin: 10px 0; /* Increased margin */
         }
 
         .meta-tag {
             background: rgba(0, 51, 102, 0.1);
             color: var(--primary);
-            padding: 3px 7px;
+            padding: 5px 10px; /* Increased padding */
             border-radius: 12px;
-            font-size: 0.55rem;
+            font-size: 0.9rem; /* Increased font size */
             border: 1px solid rgba(0, 51, 102, 0.2);
             text-shadow: 0 0 3px rgba(0, 51, 102, 0.2);
         }
@@ -420,7 +419,7 @@
             display: inline-block;
             color: var(--light);
             background: linear-gradient(90deg, var(--primary), var(--secondary));
-            padding: 6px 12px;
+            padding: 10px 18px; /* Increased padding */
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
@@ -432,8 +431,8 @@
             letter-spacing: 0.6px;
             position: relative;
             overflow: hidden;
-            margin-top: 12px;
-            font-size: 0.75rem;
+            margin-top: 15px; /* Increased margin */
+            font-size: 1.1rem; /* Increased font size */
         }
 
         .article-link::before {
@@ -460,15 +459,15 @@
 
         .copyright {
             text-align: center;
-            padding: 25px 0 12px;
+            padding: 30px 0 15px; /* Increased padding */
             color: #555;
-            font-size: 0.6rem;
+            font-size: 0.9rem; /* Increased font size */
             border-top: 1px solid rgba(0, 51, 102, 0.1);
-            margin-top: 20px;
+            margin-top: 30px; /* Increased margin */
         }
 
         .copyright p {
-            margin: 5px 0;
+            margin: 8px 0; /* Increased margin */
         }
 
         .copyright a {
@@ -483,23 +482,82 @@
         }
 
         .university-logo {
-            width: 100px;
-            margin: 9px auto;
+            width: 120px; /* Increased width */
+            margin: 12px auto; /* Increased margin */
             filter: brightness(0.8);
             opacity: 0.7;
         }
 
-        /* --- Media Queries for Mobile Compatibility --- */
-        @media (max-width: 1100px) {
-            .articles-container {
-                grid-template-columns: 1fr 1fr;
-            }
+        /* --- Specific styles for iframe and contact info --- */
+        .google-form-container {
+            grid-column: 1 / -1; /* Span full width */
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 51, 102, 0.1);
+            border-radius: 9px;
+            padding: 20px; /* Increased padding */
+            margin: 20px 0; /* Increased margin */
+            box-shadow: 0 0 18px rgba(0, 51, 102, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
+        .google-form-container::before {
+             content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2.4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        .google-form-container:hover {
+            box-shadow: 0 6px 24px rgba(0, 51, 102, 0.3);
+        }
+        .google-form-container:hover::before {
+            transform: scaleX(1);
+        }
+        .google-form-container h3 {
+            color: var(--primary);
+            font-size: 1.4rem; /* Increased font size */
+            margin-bottom: 15px; /* Increased margin */
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Increased gap */
+            font-family: 'Orbitron', sans-serif;
+        }
+        .google-form-iframe {
+            width: 100%;
+            height: 900px; /* Increased height */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 15px; /* Increased margin */
+        }
+        .contact-info {
+            margin-top: 15px; /* Increased margin */
+        }
+        .contact-info p {
+            margin-bottom: 8px; /* Increased margin */
+            font-size: 1.1rem; /* Increased font size */
+        }
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: underline;
+            font-size: 1.1rem; /* Increased font size */
+        }
+        .contact-info a:hover {
+            color: var(--secondary);
+        }
+        /* --- End of specific styles --- */
 
+        /* --- Media Queries for Mobile Compatibility --- */
         @media (max-width: 900px) {
             body {
                 flex-direction: column;
                 padding: 10px;
+                font-size: 16px; /* Adjust font size for smaller screens */
             }
 
             .sidebar {
@@ -513,28 +571,19 @@
                 grid-template-columns: 1fr;
             }
 
-            .article-card {
-                /* aspect-ratio: auto; */
-                min-height: 250px;
-            }
-
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.8rem; /* Adjusted font size */
             }
 
             .subtitle {
-                font-size: 0.65rem;
-            }
-
-            .header-image {
-                width: 120px;
+                font-size: 1rem; /* Adjusted font size */
             }
 
             .header-home-link {
                 top: 12px;
                 left: 12px;
-                padding: 6px 12px;
-                font-size: 0.75rem;
+                padding: 8px 15px; /* Adjusted padding */
+                font-size: 1rem; /* Adjusted font size */
             }
             .contact-card-content {
                 flex-direction: column;
@@ -549,30 +598,30 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.4rem;
+                font-size: 1.6rem; /* Adjusted font size */
             }
 
-            .contact-card a {
-                font-size: 0.7rem;
+            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .header-home-link {
+                font-size: 1rem; /* Adjusted font size */
             }
 
             .article-card {
-                padding: 12px 9px;
+                padding: 15px 12px; /* Adjusted padding */
             }
 
             .article-card h3 {
-                font-size: 0.9rem;
+                font-size: 1.2rem; /* Adjusted font size */
             }
 
             .header-home-link {
                 top: 10px;
                 left: 10px;
-                padding: 5px 10px;
-                font-size: 0.7rem;
+                padding: 6px 12px; /* Adjusted padding */
+                font-size: 0.9rem; /* Adjusted font size */
             }
 
             .subtitle {
-                font-size: 0.6rem;
+                font-size: 0.9rem; /* Adjusted font size */
             }
 
             .sidebar {
@@ -582,51 +631,31 @@
                 width: 50px;
             }
             .contact-card-quote {
-                font-size: 0.65rem;
+                font-size: 0.95rem; /* Adjusted font size */
+            }
+            .google-form-iframe {
+                height: 700px; /* Adjust height for smaller screens if needed */
             }
         }
 
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.2rem;
+                font-size: 1.4rem; /* Adjusted font size */
             }
 
             .article-card h3 {
-                font-size: 0.85rem;
+                font-size: 1.1rem; /* Adjusted font size */
             }
 
-            .contact-card a {
-                font-size: 0.65rem;
+            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .header-home-link, .contact-card-quote {
+                font-size: 0.9rem; /* Adjusted font size */
             }
-            .contact-card-quote {
-                font-size: 0.6rem;
+            .citation {
+                font-size: 0.8rem; /* Adjusted font size */
             }
         }
         /* --- End of Media Queries --- */
 
-        /* --- Specific styles for iframe and contact info --- */
-        .google-form-iframe {
-            width: 100%;
-            height: 800px; /* Adjust height as needed */
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .contact-info {
-            margin-top: 10px;
-        }
-        .contact-info p {
-            margin-bottom: 5px;
-            font-size: 0.85rem;
-        }
-        .contact-info a {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-        .contact-info a:hover {
-            color: var(--secondary);
-        }
-        /* --- End of specific styles --- */
     </style>
 </head>
 <body>
@@ -641,16 +670,13 @@
         <img src="https://github.com/oeybers-cpu/ngugi/blob/main/Wa%20Thiongo.jpeg?raw=true" alt="UAL Logo" class="sidebar-image">
 
         <div class="sidebar-links">
-            <a href="https://ualnewsletter.com" class="sidebar-link" target="_blank">
-                UAL Newsletter
+            <a href="#guidelines" class="sidebar-link">
+                Guidelines
             </a>
-            <a href="https://ualnewsletter.com/about" class="sidebar-link" target="_blank">
-                About UAL
+            <a href="#upload" class="sidebar-link">
+                Upload Article
             </a>
-            <a href="https://ualnewsletter.com/archive" class="sidebar-link" target="_blank">
-                Newsletter Archive
-            </a>
-            <a href="https://ualnewsletter.com/contact" class="sidebar-link" target="_blank">
+            <a href="#contact" class="sidebar-link">
                 Contact Us
             </a>
         </div>
@@ -678,7 +704,7 @@
 
             <div class="articles-container">
                 <!-- Card 1: Guidelines -->
-                <div class="article-card">
+                <div class="article-card" id="guidelines">
                     <h3><i class="fas fa-book"></i> Submission Guidelines</h3>
                     <div class="article-content">
                         <p><strong>Article Length:</strong> Articles should be between 800 and 1,100 words.</p>
@@ -718,36 +744,12 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Upload Process -->
-                <div class="article-card">
-                    <h3><i class="fas fa-upload"></i> Upload Your Article</h3>
-                    <div class="article-content">
-                        <p>To submit your article, please complete the Google Form below. You will be asked to provide your article file and some basic information.</p>
-                        <p><strong>Instructions:</strong></p>
-                        <ol>
-                            <li>Click the "Submit" button within the form.</li>
-                            <li>Upload your article file (Word or RTF format).</li>
-                            <li>Fill in the required fields (Title, Abstract, Keywords, Author Bio, etc.).</li>
-                            <li>Submit the form.</li>
-                        </ol>
-                        <p>Our editorial team will review your submission and contact you regarding the next steps.</p>
-                        <p><strong>Note:</strong> For multimedia files (images, audio, video), please upload them to a shared Google Drive folder or email them separately to the editorial team. Include a link to the files in the Google Form if using Drive.</p>
-                        
-                        <!-- Embed the Google Form -->
-                        <iframe class="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeWZXbVyi2yhBZbObyFIpWFqfMnnsbWkIzk5AYomUjuNTp2rg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                    <div class="article-meta">
-                        <span class="meta-tag">Submission</span>
-                        <span class="meta-tag">Google Form</span>
-                    </div>
-                </div>
-
-                <!-- Card 3: Contact Us -->
-                <div class="article-card">
+                <!-- Card 2: Contact Us -->
+                <div class="article-card" id="contact">
                     <h3><i class="fas fa-envelope"></i> Contact the Editorial Team</h3>
                     <div class="article-content">
                         <p>If you have any questions about the submission process, need clarification on the guidelines, or require assistance with your draft, please do not hesitate to contact our editorial support team.</p>
-                        
+
                         <div class="contact-info">
                             <p><strong>Nkosingiphile Zondi</strong><br>
                                 Editor<br>
@@ -765,7 +767,7 @@
 
                         <p><strong>Editorial Support:</strong></p>
                         <p>Our editorial team is here to help you with article submissions, provide feedback on drafts, and answer any questions about the publication process. Don't hesitate to reach out!</p>
-                        
+
                         <p><strong>Multimedia:</strong></p>
                         <p>Multimedia files can be emailed directly to the editors or uploaded to a Google Drive folder. If using Google Drive, please share the link in the submission form or via email.</p>
                     </div>
@@ -775,7 +777,7 @@
                     </div>
                 </div>
 
-                 <!-- Placeholder Card 4 -->
+                 <!-- Placeholder Card 3 -->
                  <div class="article-card">
                     <h3><i class="fas fa-question-circle"></i> Additional Information</h3>
                     <div class="article-content">
@@ -791,6 +793,26 @@
                     <div class="article-meta">
                         <span class="meta-tag">Info</span>
                         <span class="meta-tag new-tag">Placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Upload Process (Full Width) -->
+                <div class="google-form-container" id="upload">
+                    <h3><i class="fas fa-upload"></i> Upload Your Article</h3>
+                    <div class="article-content">
+                        <p>To submit your article, please complete the Google Form below. You will be asked to provide your article file and some basic information.</p>
+                        <p><strong>Instructions:</strong></p>
+                        <ol>
+                            <li>Click the "Submit" button within the form.</li>
+                            <li>Upload your article file (Word or RTF format).</li>
+                            <li>Fill in the required fields (Title, Abstract, Keywords, Author Bio, etc.).</li>
+                            <li>Submit the form.</li>
+                        </ol>
+                        <p>Our editorial team will review your submission and contact you regarding the next steps.</p>
+                        <p><strong>Note:</strong> For multimedia files (images, audio, video), please upload them to a shared Google Drive folder or email them separately to the editorial team. Include a link to the files in the Google Form if using Drive.</p>
+
+                        <!-- Embed the Google Form -->
+                        <iframe class="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeWZXbVyi2yhBZbObyFIpWFqfMnnsbWkIzk5AYomUjuNTp2rg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                 </div>
 
@@ -814,7 +836,7 @@
     <script>
         // Add subtle animation to article cards on page load
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.article-card');
+            const cards = document.querySelectorAll('.article-card, .google-form-container');
 
             cards.forEach((card, index) => {
                 card.style.opacity = '0';
@@ -839,4 +861,3 @@
     </script>
 </body>
 </html>
-```
