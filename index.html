@@ -68,46 +68,7 @@
             z-index: -1;
         }
 
-        /* --- Header Home Link Style --- */
-        .header-home-link {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            display: inline-block;
-            text-align: center;
-            padding: 10px 18px; /* Increased padding */
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border: 1px solid var(--text);
-            border-radius: 20px;
-            color: var(--light);
-            text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem; /* Increased font size */
-            transition: all 0.3s ease;
-            /* --- MODIFIED: Changed glow to only blue --- */
-            box-shadow:
-                0 0 7px var(--primary),
-                0 0 13px var(--primary),
-                inset 0 0 4px rgba(255, 255, 255, 0.5);
-            /* --- END MODIFICATION --- */
-            z-index: 10;
-        }
-
-        .header-home-link:hover {
-            transform: scale(1.03) translateY(-1.5px);
-            /* --- MODIFIED: Changed hover glow to only blue --- */
-            box-shadow:
-                0 0 12px var(--primary),
-                0 0 20px var(--primary),
-                inset 0 0 8px rgba(255, 255, 255, 0.8);
-            /* --- END MODIFICATION --- */
-            color: var(--light);
-        }
-        /* --- End of Header Home Link Style --- */
-
-
-        /* Sidebar styling */
+        /* --- Sidebar styling --- */
         .sidebar {
             width: var(--sidebar-width);
             padding: 15px;
@@ -121,7 +82,13 @@
             top: 15px;
         }
 
-        /* --- Animated UAL Logo --- */
+        /* --- Animated UAL Logo Container --- */
+        /* --- MODIFIED: Make container a link --- */
+        .sidebar-logo-link {
+            display: block; /* Make the link behave like a block element */
+            text-decoration: none; /* Remove default underline */
+            color: inherit; /* Inherit text color */
+        }
         .sidebar-logo-container {
             width: 100%;
             aspect-ratio: 1; /* Makes it square */
@@ -134,7 +101,19 @@
             align-items: center;
             overflow: hidden;
             position: relative;
+             /* --- MODIFIED: Add cursor pointer to indicate it's clickable --- */
+            cursor: pointer;
+            transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
         }
+        .sidebar-logo-container:hover {
+             /* --- MODIFIED: Add glow effect on hover --- */
+            box-shadow:
+                0 0 10px var(--primary),
+                0 0 20px var(--secondary),
+                0 0 30px var(--primary);
+        }
+        /* --- END MODIFICATION --- */
+
 
         .ual-logo {
             font-family: 'Orbitron', sans-serif;
@@ -171,7 +150,17 @@
                     0 0 80px #f0f;
             }
         }
-        /* --- End of Animated UAL Logo --- */
+
+        /* --- MODIFIED: Style for the caption --- */
+        .logo-caption {
+            text-align: center;
+            font-size: 0.85rem; /* Smaller font size */
+            color: var(--primary); /* Use primary color */
+            margin-top: -10px; /* Pull caption closer to the logo */
+            margin-bottom: 15px; /* Space below the caption */
+            font-style: italic; /* Italicize the caption */
+        }
+        /* --- END MODIFICATION --- */
 
 
         .sidebar-links {
@@ -618,12 +607,6 @@
                 font-size: 1rem; /* Adjusted font size */
             }
 
-            .header-home-link {
-                top: 12px;
-                left: 12px;
-                padding: 8px 15px; /* Adjusted padding */
-                font-size: 1rem; /* Adjusted font size */
-            }
             .contact-card-content {
                 flex-direction: column;
                 align-items: center;
@@ -636,7 +619,7 @@
                 font-size: 1.6rem; /* Adjusted font size */
             }
 
-            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .header-home-link {
+            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .logo-caption {
                 font-size: 1rem; /* Adjusted font size */
             }
 
@@ -646,13 +629,6 @@
 
             .article-card h3 {
                 font-size: 1.2rem; /* Adjusted font size */
-            }
-
-            .header-home-link {
-                top: 10px;
-                left: 10px;
-                padding: 6px 12px; /* Adjusted padding */
-                font-size: 0.9rem; /* Adjusted font size */
             }
 
             .subtitle {
@@ -682,7 +658,7 @@
                 font-size: 1.1rem; /* Adjusted font size */
             }
 
-            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .header-home-link, .contact-card-quote {
+            .contact-card a, .contact-info a, .contact-info p, .article-content, .article-link, .sidebar-link, .logo-caption, .contact-card-quote {
                 font-size: 0.9rem; /* Adjusted font size */
             }
             .citation {
@@ -698,30 +674,6 @@
 </head>
 <body>
     <div class="grid-lines"></div>
-
-    <!-- --- MODIFIED: Changed button text to "UAL Home" --- -->
-    <a href="https://www.up.ac.za/unit-for-academic-literacy" class="header-home-link">UAL Home</a>
-    <!-- --- END MODIFICATION --- -->
-
-    <!-- Sidebar with animated logo and links -->
-    <div class="sidebar">
-        <!-- Animated UAL Logo -->
-        <div class="sidebar-logo-container">
-            <div class="ual-logo">UAL</div>
-        </div>
-
-        <div class="sidebar-links">
-            <a href="#guidelines" class="sidebar-link">
-                Focus Areas
-            </a>
-            <a href="#upload" class="sidebar-link">
-                Submission
-            </a>
-            <a href="#contact" class="sidebar-link">
-                Contact Us
-            </a>
-        </div>
-    </div>
 
     <!-- Main content -->
     <div class="main-content">
@@ -881,6 +833,30 @@
                 <p>For inquiries, contact the editorial team.</p>
                 <p>Explore more: <a href="https://www.up.ac.za/unit-for-academic-literacy" target="_blank">Unit for Academic Literacy</a></p>
             </div>
+        </div>
+    </div>
+
+    <!-- Sidebar with animated logo and links -->
+    <div class="sidebar">
+        <!-- --- MODIFIED: Wrap logo container in a link and add caption --- -->
+        <a href="https://www.up.ac.za/unit-for-academic-literacy" class="sidebar-logo-link" target="_blank">
+            <div class="sidebar-logo-container">
+                <div class="ual-logo">UAL</div>
+            </div>
+        </a>
+        <p class="logo-caption">Click image to go to UAL Home</p>
+        <!-- --- END MODIFICATION --- -->
+
+        <div class="sidebar-links">
+            <a href="#guidelines" class="sidebar-link">
+                Focus Areas
+            </a>
+            <a href="#upload" class="sidebar-link">
+                Submission
+            </a>
+            <a href="#contact" class="sidebar-link">
+                Contact Us
+            </a>
         </div>
     </div>
 
